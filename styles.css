@@ -1,0 +1,106 @@
+body {
+    background-color: #333F47;
+    font-family: system-ui;
+}
+@font-face {
+    font-family: 'norse';
+    src: url('./fonts/Norse.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* .images { 
+    position: relative;
+    display: inline-block;
+}
+.img1{
+    display: block;
+    width: 80%;
+    height: auto;
+}
+.img2 {
+    position: absolute;
+    top:20%;
+    right: 70%;
+    width: 100px;
+    height: auto;
+    z-index: 10;
+    background-color: black;
+    opacity: 50%;
+}
+.image2::after {
+    content: "ODIN";
+    position: absolute;
+    top: 20%;
+    color: white;
+    right: 45%;
+    font-size: 100px;
+    background-color: black;
+    opacity: 50%;
+}*/
+/* Общий контейнер на весь экран */
+.page-container {
+    display: flex;
+    min-height: 100vh; /* Занимает всю высоту экрана */
+}
+
+/* Левая колонка (картинка-фон) */
+.sidebar {
+    flex: 0 0 35%; /* Фиксированная ширина левой колонки (например, 35% от экрана) */
+    background-image: url('halie-west-25xggax4bSA-unsplash.jpg'); /* Картинка как фон */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Чтобы внутри можно было позиционировать плашку */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Раскидываем логотип и копирайт по верху/низу */
+}
+
+/* Правая колонка с формой */
+.form-container {
+    flex: 1; /* Занимает всё оставшееся пространство */
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+.logo-box {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    margin-top: 150px;
+    font-family: 'norse'; /* Сдвигаем на нужную высоту сверху */
+}
+
+.logo-box span {
+    font-size: 7rem;
+    color: white;
+    font-weight: bold;
+}
+.firstName, .lastName, .Email, .phoneNumber, .passwd, .confirmPasswd {
+    display: flex;
+    flex-direction: column;
+}
+.allForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-row, .form-row1 {
+    display: flex;
+    gap: 20px;
+}
+button {
+    background-color: #3B6352;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+a {
+    color: #3B6352;
+}
